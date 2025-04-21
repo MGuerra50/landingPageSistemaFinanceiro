@@ -58,7 +58,7 @@ const HeroButton = ({ children, border = "#91C9FF", background = "rgba(80, 42, 2
                     fontSize="18px"
                     color="white"
                     zIndex={2}
-                    _hover={{ fontWeight: "extrabold" }}
+                    _hover={{ fontWeight: "extrabold", textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)" }}
                 >
                     {children}
                 </Text>
