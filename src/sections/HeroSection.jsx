@@ -15,9 +15,15 @@ const HeroSection = () => {
         setGradientPosition({ x, y })
     }
     return (
-        <Box bgImage={logo} bgSize="cover" bgPosition="center" h="100vh" w="auto" overflow="hidden">
-            <Flex justify="space-between" align="center" w={"100%"} h="100vh" bgGradient="linear(to-r,rgba(80, 42, 204, 0.97),rgba(185, 56, 250, 0.97))">
-                <Box w="50%" h="90%">
+        <Box bgImage={logo} bgSize="81%" bgPosition="center" h="100vh" w="auto" overflow="vizible">
+            <Flex
+                justify="space-between"
+                align="center"
+                w={"100%"}
+                h="100vh"
+                bgGradient="linear(to-r,rgba(80, 42, 204, 0.97),rgba(185, 56, 250, 0.97))"
+            >
+                <Box w="50%" h="90%" flexWrap={"wrap"}>
                     <Box fontSize="4xl" color="white" fontWeight="bold" textAlign="left" pl={150} pt={10}>
                         <Text fontSize={"4rem"} mt={"1%"} mb={"-4%"}>Take control</Text>
                         <Text fontSize={"4rem"} mb={"-4%"}>of your</Text>
@@ -68,7 +74,7 @@ const HeroSection = () => {
                             bottom={0}
                             zIndex={-1}
                             animation="moveUpFade 0.6s ease-out forwards"
-                            style={{ userSelect: "none" }} 
+                            style={{ userSelect: "none" }}
                         />
                     </Box>
                 </Box>
