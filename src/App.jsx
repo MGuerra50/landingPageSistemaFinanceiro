@@ -14,7 +14,6 @@ function App() {
     <>
       <BarNavigation />
       <HeroSection />
-      {/* <TriangleDivider /> */}
       <SectionDivider />
       <Box /*bgGradient={"linear(to-r,rgba(80, 42, 204, 0.97),rgba(185, 56, 250, 0.97))"}*/>
         <CardSection>
@@ -27,6 +26,7 @@ function App() {
           </Flex>
         </CardSection>
       </Box>
+      <SectionDivider deg={3} background={"#fff"}/>
     </>
   )
 }

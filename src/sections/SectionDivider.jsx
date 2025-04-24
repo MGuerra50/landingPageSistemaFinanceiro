@@ -24,7 +24,7 @@ export const TriangleDivider = () => {
   );
 };
 
-const SectionDivider = () => {
+const SectionDivider = ({deg=3, background}) => {
   return (
     <Box
       w="100%"
@@ -41,11 +41,10 @@ const SectionDivider = () => {
         right="0"
         w="100%"
         h="100%"
-        bgGradient="linear(to-r,rgba(80, 42, 204, 0.97),rgba(185, 56, 250, 0.97))"
-        transform="skewY(3deg)"
+        {...( background ? { bg: background } : { bgGradient: "linear(to-r,rgba(80, 42, 204, 0.97),rgba(185, 56, 250, 0.97))" })}
+        transform={`skewY(${deg}deg)`}
         transformOrigin="top right"
       />
-      Testando Divider
     </Box>
   );
 };
