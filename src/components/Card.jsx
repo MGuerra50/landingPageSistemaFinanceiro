@@ -1,60 +1,57 @@
-import { Box, Text, Flex, Icon, Divider, chakra } from "@chakra-ui/react";
-// import { FiPieChart } from "react-icons/fi";
+import { Box, Button, Text, Flex, Divider } from "@chakra-ui/react";
+import { RiArrowUpBoxFill } from "react-icons/ri";
 
 const Card = () => {
     return (
         <Box
-            maxW="300px"
+            maxW="250px"
             mx="auto"
-            //   my="5rem"
             mt={"2rem"}
-            mb={"5rem"}
-            bg="rgba(255, 255, 255, 0.05)"
+            mb={"2rem"}
+            bg="rgb(255, 255, 255)"
             borderRadius="lg"
-            boxShadow="0 8px 32px 0 rgba(31, 38, 135, 0.37)"
+            boxShadow="-1px 2px 3px 0 rgba(31, 38, 135, 0.27)"
             backdropFilter="blur(10px)"
             border="1px solid rgba(255, 255, 255, 0.18)"
             color="white"
             p="1.5rem"
-            transition="all 0.5s"
+            transition="all 0.4s ease-in-out"
             _hover={{
-                transform: "scale(1.03)",
-                boxShadow: "0 8px 50px 0 rgba(0, 0, 0, 0.4)",
+                transform: "scale(1.025)",
             }}
         >
-            {/* Ícone no topo */}
             <Flex justify="center" align="center" mb="4">
-                <Box
-                    bg="linear-gradient(135deg, #6b46c1, #805ad5)"
-                    p="3"
-                    borderRadius="full"
-                >
-                    {/* <Icon as={FiPieChart} boxSize="8" /> */}
+                <Box color={"black"}>
+                    <RiArrowUpBoxFill size={"50px"}/>
                 </Box>
             </Flex>
-
-            {/* Conteúdo */}
-            <Text fontSize="lg" fontWeight="bold">
-                Overview
-            </Text>
-            <Text fontSize="3xl" fontWeight="extrabold" color="yellow.300">
-                $24,500
+            <Text fontSize="2xl" fontWeight="semibold" color="black" textAlign={"center"}>
+                Smart Budgeting
             </Text>
 
             <Divider borderColor="whiteAlpha.300" my="4" />
 
-            <Flex justify="space-between" fontSize="sm">
-                <Text color="gray.300">Income</Text>
-                <Text color="green.400">+ $5,000</Text>
-            </Flex>
-            <Flex justify="space-between" fontSize="sm">
-                <Text color="gray.300">Expenses</Text>
-                <Text color="red.400">- $3,200</Text>
-            </Flex>
-            <Flex justify="space-between" fontSize="sm">
-                <Text color="gray.300">Investments</Text>
-                <Text color="cyan.300">+ $19,450</Text>
-            </Flex>
+            <Text color={"black"} fontSize="sm" textAlign={"center"}>
+                Track and manage your budget with real-time alerts
+            </Text>
+
+            <Divider />
+            <a href="#" width={"100%"} height={"100%"} border_radius={"7px"}>
+                <Box
+                    w={"100%"}
+                    h={"100%"}
+                    color={"black"}
+                    justifyContent={"center"}
+                    display={"flex"}
+                    alignItems={"center"}
+                    mt="4"
+                    transition={"0.5s ease-in-out"}
+                    borderRadius={"7px"}
+                    _hover={{ bg: "#291C5E", fontWeight: "extrabold", color: "white" }}
+                >
+                    Learn More
+                </Box>
+            </a>
         </Box>
     );
 };

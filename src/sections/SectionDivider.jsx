@@ -24,11 +24,12 @@ export const TriangleDivider = () => {
   );
 };
 
-const SectionDivider = ({deg=3, background}) => {
+const SectionDivider = ({deg=3, background1, background2}) => {
   return (
     <Box
       w="100%"
       h="80px"
+      {...( background1 ? { bg: background1 } : { bgGradient: "linear(to-r,rgba(80, 42, 204, 0.97),rgba(185, 56, 250, 0.97))" })}
       position="relative"
       overflow="hidden"
       zIndex={1}
@@ -41,7 +42,7 @@ const SectionDivider = ({deg=3, background}) => {
         right="0"
         w="100%"
         h="100%"
-        {...( background ? { bg: background } : { bgGradient: "linear(to-r,rgba(80, 42, 204, 0.97),rgba(185, 56, 250, 0.97))" })}
+        {...( background2 ? { bg: background2 } : { bgGradient: "linear(to-r,rgba(80, 42, 204, 0.97),rgba(185, 56, 250, 0.97))" })}
         transform={`skewY(${deg}deg)`}
         transformOrigin="top right"
       />

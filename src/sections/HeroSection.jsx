@@ -41,7 +41,12 @@ const HeroSection = () => {
                         >
                             FINANCES</Text>
                         <Box w={"70%"} mt={4}>
-                            <Text fontSize={"60%"} textAlign={"left"}>
+                            <Text
+                                textAlign={"left"}
+                                fontSize={{ base: "xl", md: "1xl" }}
+                                fontWeight="900"
+                                color="white.600"
+                            >
                                 Track your income, expenses, and investmants with ease
                             </Text>
                         </Box>
@@ -56,7 +61,11 @@ const HeroSection = () => {
                             <Box
                                 transition={"0.2s ease all"}
                                 borderRadius={"15px"}
-                                _hover={{ transform: "scale(1.2)", boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)" }}
+                                transform={"scale(1.3)"}
+                                _hover={{
+                                    transform: "scale(1.5)",
+                                    boxShadow: "0 0 10px rgba(255, 255, 255, 0.5)"
+                                }}
                             >
                                 <HeroButton background="rgb(252, 218, 106)">Get Started</HeroButton>
                             </Box>

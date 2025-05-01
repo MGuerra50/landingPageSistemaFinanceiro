@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react";
 
-const CardSection = ({ children, bg = "white" }) => {
+const CardSection = ({ children, bg = "#FAFAFA" }) => {
     return (
-        <Box>
+        <Box bg={bg}>
             {children}
         </Box>
     );
