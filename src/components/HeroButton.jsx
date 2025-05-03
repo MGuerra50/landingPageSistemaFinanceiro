@@ -1,7 +1,7 @@
 import { Box, Button, Text } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 
-const HeroButton = ({ children, border = "#91C9FF", background = "rgba(80, 42, 204, 1)" }) => {
+const HeroButton = ({ children, dark = false, border = "#91C9FF", background = "rgba(80, 42, 204, 1)" }) => {
 
     const svgRef = useRef(null);
 
@@ -56,9 +56,9 @@ const HeroButton = ({ children, border = "#91C9FF", background = "rgba(80, 42, 2
                     fontWeight="100"
                     alignContent={"center"}
                     fontSize="18px"
-                    color="white"
+                    color={dark === true ? "black" : "white"}
                     zIndex={2}
-                    _hover={{ fontWeight: "extrabold", textShadow: "1px 1px 1px rgba(0, 0, 0, 0.3)" }}
+                    _hover={{ fontWeight: "extrabold", textShadow: "1px 1px 1px rgba(0, 0, 0, 0.3)", color: "white" }}
                 >
                     {children}
                 </Text>

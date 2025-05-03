@@ -21,7 +21,7 @@ const BarNavigation = () => {
             top="0"
             zIndex="1000"
             transition="background 0.3s ease, box-shadow 0.3s ease"
-            bg={scrolled ? "rgba(255,255,255,0.2)" : "transparent"}
+            bg={scrolled ? "rgba(0,0,0,0.3)" : "transparent"}
             backdropFilter={scrolled ? "blur(10px)" : "none"}
             boxShadow={scrolled ? "md" : "none"}
             color={scrolled ? "white" : "black"}
